@@ -6,7 +6,7 @@ import Link from "next/link";
 const slides = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop", 
+      image: "https://res.cloudinary.com/pvnhgx8n/image/upload/f_auto,q_auto/v1795198600/visa.avif", 
       pill: "Fast Processing",
       title: "Get Your Visas\nHassle-Free & Quickly",
       buttonText: "CHECK VISAS",
@@ -16,7 +16,7 @@ const slides = [
     },
     {
         id: 2,
-        image: "https://makkah-madinah.accor.com/wp-content/uploads/2025/07/Destination_Mecca_14.jpg", // Nayi Umrah Image
+        image: "https://res.cloudinary.com/pvnhgx8n/image/upload/f_auto,q_auto/v1795198601/Umrah.jpg", // Nayi Umrah Image
         pill: "Spiritual Journeys",
         title: "Perform Umrah With\nUltimate Peace of Mind",
         buttonText: "VIEW PACKAGES",
@@ -26,7 +26,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "https://kbmtours.com/wp-content/uploads/2026/10/b4471cb22dd89e8c20ddebd8-3-scaled-opt1600.webp", // Nayi Ziyarat Image
+    image: "https://res.cloudinary.com/pvnhgx8n/image/upload/f_auto,q_auto/v1795198601/ziaraat.webp", // Nayi Ziyarat Image
     pill: "Sacred Ziaraat",
     title: "Embark On A Blessed\nZiaraat Journey",
     buttonText: "LEARN MORE",
@@ -36,7 +36,7 @@ const slides = [
 },
 {
   id: 4,
-  image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?q=80&w=2070&auto=format&fit=crop", 
+  image: "https://res.cloudinary.com/pvnhgx8n/image/upload/f_auto,q_auto/v1795198600/tours.avif", 
   pill: "Discover The World",
   title: "Explore The Majestic\nGlobal Landscape Now",
   buttonText: "GET STARTED",
@@ -59,7 +59,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black flex items-center">
       
-      {/* Background Images */}
+      {/* Background Images with Blur Cross-fade & Zoom Effect */}
       {slides.map((slide, index) => {
         const isActive = index === current;
         return (
@@ -83,40 +83,57 @@ export default function HeroSection() {
 
       {/* Main Content Layout */}
       <div className="relative z-10 w-full max-w-[95%] xl:max-w-7xl mx-auto px-4 mt-20">
-        <div key={current} className="max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          
-          <div className="inline-block bg-white/20 backdrop-blur-md border border-white/30 text-white px-5 py-1.5 rounded-full text-sm font-medium mb-6 tracking-wide">
-            {slides[current].pill}
-          </div>
+        
+        {/* CSS Grid for Overlapping Text Animations */}
+        <div className="grid grid-cols-1 grid-rows-1 max-w-3xl">
+          {slides.map((slide, index) => {
+            const isActive = index === current;
+            return (
+              <div 
+                key={slide.id} 
+                className={`col-start-1 row-start-1 transition-all duration-[1200ms] ease-in-out ${
+                  isActive 
+                    ? "opacity-100 blur-0 translate-y-0 pointer-events-auto" 
+                    : "opacity-0 blur-md translate-y-12 pointer-events-none"
+                }`}
+              >
+                
+                <div className="inline-block bg-white/20 backdrop-blur-md border border-white/30 text-white px-5 py-1.5 rounded-full text-sm font-medium mb-6 tracking-wide">
+                  {slide.pill}
+                </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-lg">
-            {slides[current].title.split('\n').map((line, i) => (
-              <span key={i} className="block">{line}</span>
-            ))}
-          </h1>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-lg">
+                  {slide.title.split('\n').map((line, i) => (
+                    <span key={i} className="block">{line}</span>
+                  ))}
+                </h1>
 
-          <Link 
-            href={slides[current].link}
-            className="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full text-sm font-bold transition-all hover:bg-gray-200 mb-12 shadow-xl"
-          >
-            {slides[current].buttonText} <span>→</span>
-          </Link>
+                <Link 
+                  href={slide.link}
+                  className="inline-flex items-center gap-2 bg-white text-black px-8 py-3.5 rounded-full text-sm font-bold transition-all hover:bg-gray-200 mb-12 shadow-xl"
+                >
+                  {slide.buttonText} <span>→</span>
+                </Link>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl border-t border-white/20 pt-6">
-            <div className="flex gap-4 items-start">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl border-t border-white/20 pt-6">
+                  <div className="flex gap-4 items-start">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <p className="text-gray-200 text-sm leading-relaxed">{slide.bottomText1}</p>
+                  </div>
+                  
+                  <div className="flex gap-4 items-start">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <p className="text-gray-200 text-sm leading-relaxed">{slide.bottomText2}</p>
+                  </div>
+                </div>
+
               </div>
-              <p className="text-gray-200 text-sm leading-relaxed">{slides[current].bottomText1}</p>
-            </div>
-            
-            <div className="flex gap-4 items-start">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              </div>
-              <p className="text-gray-200 text-sm leading-relaxed">{slides[current].bottomText2}</p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
 
