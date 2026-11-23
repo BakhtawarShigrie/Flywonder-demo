@@ -9,7 +9,6 @@ export default function Footer() {
     <footer className="bg-[#091019] border-t border-slate-800/80 text-slate-300 pt-16 pb-8 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80">
-          
           {/* 1. Brand & Logo Column */}
           <div className="lg:col-span-4 space-y-5">
             <Link href="/" className="inline-block">
@@ -25,11 +24,11 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Your trusted travel partner in Lahore for worldwide visit visas, customized family &amp; group Umrah packages, international tours, and air ticketing.
+              Your trusted travel partner in Lahore for worldwide air ticketing, visit &amp; e-visas, customized Umrah packages, sacred Iran &amp; Iraq Ziaraat, and international tours.
             </p>
           </div>
 
-          {/* 2. Quick Links */}
+          {/* 2. Quick Links (All Main Website Pages) */}
           <div className="lg:col-span-2 space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-wider text-white">
               Quick Links
@@ -40,6 +39,11 @@ export default function Footer() {
                   Home
                 </Link>
               </li>
+              {/* <li>
+                <Link href="/air-ticketing" className="text-slate-400 hover:text-sky-400 transition-colors">
+                  Air Ticketing
+                </Link>
+              </li> */}
               <li>
                 <Link href="/VISA-Services" className="text-slate-400 hover:text-sky-400 transition-colors">
                   Visa Services
@@ -51,19 +55,29 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/air-ticketing" className="text-slate-400 hover:text-sky-400 transition-colors">
-                  Air Ticketing
+                <Link href="/World-Tours" className="text-slate-400 hover:text-sky-400 transition-colors">
+                  World Tours
+                </Link>
+              </li>
+              <li>
+                <Link href="/Ziaraat" className="text-slate-400 hover:text-sky-400 transition-colors">
+                  Ziaraat
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 3. Our Services */}
+          {/* 3. Our Services (Aligned with Whole Website) */}
           <div className="lg:col-span-3 space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-wider text-white">
               Our Services
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-400">
+              {/* <li>
+                <Link href="/air-ticketing" className="hover:text-sky-400 transition-colors">
+                  Domestic &amp; International Air Ticketing
+                </Link>
+              </li> */}
               <li>
                 <Link href="/VISA-Services" className="hover:text-sky-400 transition-colors">
                   UK, USA, Canada &amp; Schengen Visas
@@ -80,8 +94,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/UMRAH-Service" className="hover:text-sky-400 transition-colors">
-                  B2B Makkah &amp; Madinah Hotel Rates
+                <Link href="/Ziaraat" className="hover:text-sky-400 transition-colors">
+                  Sacred Iran &amp; Iraq Ziaraat Tours
+                </Link>
+              </li>
+              <li>
+                <Link href="/World-Tours" className="hover:text-sky-400 transition-colors">
+                  International &amp; Northern Holiday Tours
                 </Link>
               </li>
             </ul>
@@ -108,13 +127,18 @@ export default function Footer() {
                 </a>
               </li>
 
-              <li className="flex items-center gap-2.5">
-                <svg className="w-4 h-4 text-sky-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <li className="flex items-start gap-2.5">
+                <svg className="w-4 h-4 text-sky-400 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+923097879999" className="hover:text-white transition-colors">
-                  +92 309 787 9999
-                </a>
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:+923097879999" className="hover:text-white transition-colors">
+                    0309 787 9999
+                  </a>
+                  <a href="tel:+922397879999" className="hover:text-white transition-colors">
+                    0239 787 9999
+                  </a>
+                </div>
               </li>
 
               <li className="flex items-center gap-2.5">
@@ -127,13 +151,12 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
         </div>
 
         {/* Bottom Copyright Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Fly Wonder Travel &amp; Tours. All rights reserved.</p>
-          <p>Lahore, Pakistan • Worldwide Visas, Umrah &amp; Tours</p>
+          <p>Lahore, Pakistan • Flights, Visas, Umrah, Ziaraat &amp; World Tours</p>
         </div>
       </div>
     </footer>

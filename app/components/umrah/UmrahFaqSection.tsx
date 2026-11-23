@@ -65,7 +65,7 @@ const FAQS: FaqItem[] = [
   },
 ];
 
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 export default function UmrahFaqSection() {
   const [selectedTopic, setSelectedTopic] = useState<FaqTopic>("All");

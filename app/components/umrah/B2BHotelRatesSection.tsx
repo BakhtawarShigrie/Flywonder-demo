@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 const HOTEL_TIERS = [
   { label: "5-star hotels", stars: 5 },

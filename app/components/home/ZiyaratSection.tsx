@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 const ZIARAAT_PACKAGES = [
   {

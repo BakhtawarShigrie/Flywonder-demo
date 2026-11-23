@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 export default function ToursCtaSection() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

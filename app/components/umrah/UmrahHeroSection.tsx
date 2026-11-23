@@ -27,7 +27,7 @@ const TRAVELLER_OPTIONS = [
   "10+ travellers (Group)",
 ];
 
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 export default function UmrahHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);

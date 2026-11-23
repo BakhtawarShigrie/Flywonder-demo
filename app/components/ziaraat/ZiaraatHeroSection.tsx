@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 const ZIARAAT_IMAGES = {
   topLeft:
@@ -27,7 +27,7 @@ export default function ZiaraatHeroSection() {
   )}`;
 
   return (
-    <section className="w-full bg-white pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="w-full bg-white pt-24 sm:pt-28 lg:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* ================= LEFT: 4-Image Asymmetric Leaf Collage ================= */}

@@ -398,7 +398,7 @@ const VISA_COUNTRIES: VisaCountry[] = [
   },
 ];
 
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 export default function VisaCountriesSection() {
   const [selectedRegion, setSelectedRegion] = useState<Region>("Europe");

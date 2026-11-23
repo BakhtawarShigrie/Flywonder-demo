@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "923176402959";
+const WHATSAPP_NUMBER = "923097879999";
 
 interface TourPackage {
   id: string;
