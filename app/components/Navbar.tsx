@@ -276,14 +276,20 @@ export default function Navbar() {
                 <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-[#C89B3C]/15 rounded-full blur-3xl pointer-events-none" />
 
                 <button
-                  onClick={closeModal}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    closeModal();
+                  }}
                   aria-label="Close modal"
-                  className="md:hidden absolute top-4 right-4 text-slate-300 hover:text-white bg-slate-800/80 border border-slate-700 rounded-full p-2 transition-colors cursor-pointer"
+                  className="md:hidden absolute top-4 right-4 z-20 text-slate-300 hover:text-white bg-slate-800/90 border border-slate-700 rounded-full p-2.5 transition-colors cursor-pointer"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
 
-                <div className="relative z-10">
+                <div className="relative z-10 pr-10 md:pr-0">
                   <div className="inline-flex items-center gap-2 bg-[#C89B3C]/15 border border-[#C89B3C]/35 text-[#F4C150] px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest mb-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#F4C150]" />
                     <span>Fly Wonder Travel Desk</span>
@@ -347,11 +353,17 @@ export default function Navbar() {
               {/* Right Column: Instant Action Cards */}
               <div className="md:w-7/12 p-6 sm:p-10 relative bg-[#121e2e] flex flex-col justify-center">
                 <button
-                  onClick={closeModal}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    closeModal();
+                  }}
                   aria-label="Close modal"
-                  className="hidden md:flex absolute top-5 right-5 text-slate-400 hover:text-white bg-slate-800/90 hover:bg-slate-700 border border-slate-700 rounded-full p-2 transition-colors cursor-pointer"
+                  className="hidden md:flex absolute top-5 right-5 z-20 text-slate-400 hover:text-white bg-slate-800/90 hover:bg-slate-700 border border-slate-700 rounded-full p-2 transition-colors cursor-pointer"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
 
                 {/* Hidden on Mobile Screens as Requested */}
