@@ -19,7 +19,10 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // World-Tours page per by default scrolled navbar dikhane ke liye
-  const isSolidNav = isScrolled || pathname?.toLowerCase() === "/world-tours";
+  const isSolidNav =
+  isScrolled ||
+  pathname?.toLowerCase() === "/world-tours" ||
+  pathname?.toLowerCase() === "/ziaraat";
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
